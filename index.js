@@ -1,8 +1,12 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import mongoose from 'mongoose';
 
 const app = express();
 const PORT = 4000;
+
+// mongoose
+mongoose.Promise = global.Promise
 
 // bodyparser setup
 app.use(bodyParser.urlencoded({ extended: true }));
