@@ -6,7 +6,8 @@ const app = express();
 const PORT = 4000;
 
 // mongoose
-mongoose.Promise = global.Promise
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/productsdb');
 
 // bodyparser setup
 app.use(bodyParser.urlencoded({ extended: true }));
